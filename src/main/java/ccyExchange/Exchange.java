@@ -11,12 +11,18 @@ import java.util.Scanner;
 public class Exchange {
     public void getdata(){
         Scanner scn = new Scanner(System.in);
-        double ccy = -1;
-        while(ccy!=0){
-            ccy = scn.nextDouble();
+        double money;
+        do{
+            money = scn.nextDouble();
+            System.out.printf("%d THB > %d KRW", money,exch(money,1));
             
-        }
+        }while(money!=0);
     }
+    public double exch(double money,double rate){
+        return money*rate;
+    }
+    
+    
 
 }
 
