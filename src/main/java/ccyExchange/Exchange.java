@@ -9,20 +9,28 @@ import java.util.Scanner;
  * This file is part of "ccyExchange" Package.
  */
 public class Exchange {
+    double krw_rate = 37.180345;
+    double krw;
+    nodes n = new nodes();
+    Banknode b = new Banknode();
     public void getdata(){
         Scanner scn = new Scanner(System.in);
         double money;
         do{
+            System.out.print("How many THB (Press 0 to Exit) : ");
             money = scn.nextDouble();
-            System.out.printf("%d THB > %d KRW", money,exch(money,1));
+            krw = exch(money,krw_rate);
+            System.out.printf("%,.2f THB > %,.2f KRW\n", money,krw);
+            b.toNodes(n, krw);
+            b.showNodes(n);
             
         }while(money!=0);
+        if(money==0){
+            System.out.print("Exit");
+        }
     }
     public double exch(double money,double rate){
         return money*rate;
     }
-    
-    
-
 }
 
