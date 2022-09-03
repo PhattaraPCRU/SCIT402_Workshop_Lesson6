@@ -19,6 +19,7 @@ public class Exchange {
         do{
             System.out.print("How many THB (Press 0 to Exit) : ");
             money = scn.nextDouble();
+            if(money==0){break;}
             krw = exch(money,krw_rate);
             System.out.printf("%,.2f THB > %,.2f KRW\n", money,krw);
             b.toNodes(n, krw);
