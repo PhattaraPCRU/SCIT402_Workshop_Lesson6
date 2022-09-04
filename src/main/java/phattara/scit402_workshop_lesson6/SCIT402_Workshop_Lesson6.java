@@ -12,7 +12,6 @@ import ccyExchange.Exchange;
  * @author koonp
  */
 public class SCIT402_Workshop_Lesson6 {
-
     public static void main(String[] args) {
         //System.out.println("Hello World!");
         Exchange ex = new Exchange();
