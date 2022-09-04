@@ -1,2 +1,1 @@
-# SCIT402_Workshop_Lesson6
-Use English path only!
+# Use English path only!
