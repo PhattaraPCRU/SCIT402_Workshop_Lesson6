@@ -42,7 +42,8 @@ class test extends Banknode{
         test t = new test();
         nodes n = new nodes();
         Random ran = new Random();
-        t.toNodes(n,ran.nextDouble(10000,99999999));
+        //Uncomment this if you're on jdk 17 or abrove.
+        //t.toNodes(n,ran.nextDouble(10000,99999999));
         System.out.printf("%d %d %d %d %d\n", n.FFTS,n.TTS,n.FTS,n.OTS,n.ONE);
         t.showNodes(n);
         
